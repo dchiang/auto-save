@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Auto-save
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a proposed solution for the following **Project Waste Not, Inc** frontend coding challenge:
 
-## Available Scripts
+> We have a system where we need to implement auto-save when a user enters numeric quantities for an order and it should also indicate to the user when their data is saved.
+>
+> It should not save after every keystroke since that would be too many calls to our backend. It should only save after the user hasn’t typed any number for 2 seconds.
+>
+> For simulating the call to our server, it should simulate a 1 second delay.
+>
+> Create a page that will have an edit field where the user will enter the number. After 2 seconds if the user hasn’t pressed any keys it should display on the page “Auto-saving”. After the 1 additional second where it simulates calling our server it should display “Saved”.
 
-In the project directory, you can run:
+## How it works?
 
-### `yarn start`
+- This project was constructed using `react` and `yarn` through the `yarn create react-app` command.
+- It leverages on the `useState` and `useEffect` react's hooks to controls the input change, the timers of the actions happening in the background and the feedback to the user.
+- A simple sass style was also applyied.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Install and Run
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To install just clone this repository and executes `yarn` or `yarn install` in the root of the cloned folder.
 
-### `yarn test`
+To run the project execute `yarn start`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Go to this link, if you want to see this project [running live](https://dchiang.github.io/auto-save/ "https://dchiang.github.io/auto-save/").
 
-### `yarn build`
+## Deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was deployed to `github.io` using the `gh-pages` (GitHub pages) module. To deploy it on your own `github.io` domain do the following:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Modify the `home` attribute inside the `package.json` with the URL that points to your domain and name of the repository you want to use.
+2. Modify the remote URL of your local copy of the repository.
+3. Push your changes.
+4. Run the command `yarn deploy` in the root of the repository. This will build the publish the project as a static page into your `gitbuh.io` domain.
