@@ -1,3 +1,5 @@
+import './order.scss';
+
 const OrderField = (props) => {
     const handleClick = (event) => {
         if (event.target.value === "0") {
@@ -5,9 +7,9 @@ const OrderField = (props) => {
         }
     }
     return (
-        <div>
-            <label style={{ textAlign: "right", marginRight: 10 }}>{`${props.name}:`}</label>
-            <input value={props.value} onClick={handleClick} onChange={props.handleChange} size={10} style={{ textAlign: "right" }}></input>
+        <div className="order-field">
+            <label className="label">{`${props.name}:`}</label>
+            <input className='value' value={props.value} onClick={handleClick} onChange={props.handleChange} size={10}></input>
         </div>
     );
 }
